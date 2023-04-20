@@ -1,0 +1,105 @@
+.box {
+    border: 6px solid rgb(92, 35, 0);
+    height: 90vh;
+    width: 90vw;  
+    margin-top: 20px;
+}
+
+.titre{
+    padding: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: black;
+    color: white;
+}
+
+.container1{
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
+
+.container2{
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.container3{
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.container4{
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+}
+
+.container1 > a,.container2 > a,.container3 > a,.container4 > a,.btn{
+    background-color: black;
+    padding: 10px 40px 10px 40px;
+    margin-left: 10px;
+    border: 2px solid orangered;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    text-decoration: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+input {
+    background-color: rgb(255, 255, 255);
+    padding: 6px 40px 6px 40px;
+    margin: 5px 5px 5px 5px;
+    border: 4px solid rgb(178, 12, 12);
+    border-radius: 15px;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-size: 16px;
+    text-decoration: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.info{   
+    width: 95%;
+    padding: 10px;
+    background-color: rgb(0, 80, 199);
+    max-height: 410px;
+    text-align: center;
+    overflow: scroll;
+}
+   
+.folder{
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    padding: 6px 40px 6px 40px;
+    margin:0px 2px 3px 0px;
+    border: 4px solid rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-size: 16px;
+    text-decoration: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: start;
+}
+
+.tit{
+    font-weight: bold;
+    font-size: 23px;
+    
+}
+
+.text{
+    background-color: white;
+    padding: 5px;
+    text-align: justify;
+    height: 100%;
+    width: 99.2%;
+    font-size: 18px;
+    margin-top: 8px; 
+}

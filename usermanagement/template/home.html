@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/home.css') }}">
+    <title>Document</title>
+</head>
+
+<body>
+    <center>
+        <div class="box">
+            <div class="titre">
+                <h1>Welcome to Your Home Space</h1>
+            </div>
+            <div class="container1">
+                <a href="/changepassw">
+                    <div>Change Password</div>
+                </a>
+                <a href="/logout">
+                    <div>Log Out</div>
+                </a>
+                <a href="/deluser">
+                    <div>Delete User</div>
+                </a>
+            </div>
+            <div class="container2">
+                <a href="/nbrfiles">
+                    <div>Files
+                        {% if fil %}
+                        : {{fil}} Files
+                        {% endif %}
+                    </div>
+                </a>
+                <a href="/nbrdir">
+                    <div>Directories
+                        {% if dir %}
+                        : {{dir}} Directories
+                        {% endif %}
+                    </div>
+                </a>
+                <a href="/space">
+                    <div>Space
+                        {% if spa %}
+                        : {{spa}} Mo
+                        {% endif %}
+                    </div>
+                </a>
+            </div>
+            <div class="container3">
+                <form action="/findfile" method="POST">
+                    <input type="text" name="file">
+                    <button class="btn">Find</button>
+                </form>
+                <a href="/download">
+                    <div>Download</div>
+                </a>
+            </div>
+            <div class="container4">
+                <a href="/back">
+                    <div>back</div>
+                </a>
+            </div>
+            <div class="info">
+                {% if text %}
+                <button class="folder tit">File</button>
+                {% else %}
+                <button class="folder tit">Folders</button>
+                {% endif %}
+                <div class="text">
+                    {{text}}
+                </div>
+                {% for item in directory %}
+                <form action="{{item['chemin']}}">
+                    <button class="folder">{{ item["nom"] }}</button>
+                </form>
+                {% endfor %}
+            </div>
+        </div>
+    </center>
+</body>
